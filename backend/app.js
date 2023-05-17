@@ -7,7 +7,7 @@ const bookRoutes = require('./routes/book');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://DevBack:hWnm89db0RGVMcod@cluster0.wklwgjy.mongodb.net/?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://DevBack:qnRslP7UCKdZCSrp@projet7.dgzqwll.mongodb.net/?retryWrites=true&w=majority',
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
