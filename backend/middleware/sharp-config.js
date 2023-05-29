@@ -9,6 +9,10 @@ const optimizedImg = async (req, res, next) => {
     };
     try {
         await sharp(req.file.path)
+            .resize({
+                width: 400,
+                height: 500
+            })
             .webp({ quality: 80 })
             .toFile(`${req.file.path.split('.')[0]}optimized.webp`)
         
