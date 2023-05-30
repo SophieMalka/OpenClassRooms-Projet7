@@ -29,7 +29,7 @@ exports.login = (req, res, next) => {
                             res.status(401).json({ message: 'Identifiant et/ou mot de passe incorrect' })
                         } else {
                             res.status(200).json({
-                                userId: user._id,
+                                userId: user._id, 
                                 token: jwt.sign(
                                     { userId: user._id },
                                     process.env.TOKEN,
