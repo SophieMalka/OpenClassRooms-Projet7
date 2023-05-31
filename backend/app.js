@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
+const mongoSanitize = require('express-mongo-sanitize');
+const helmet = require('helmet');
 
 require('dotenv').config();
 
@@ -25,5 +27,8 @@ app.use('/api/books', bookRoutes);
 app.use('/api/auth', userRoutes);
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
+
+app.use(mongoSanitize());
+app.use(helmet());
 
 module.exports = app;
