@@ -22,8 +22,9 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD
 app.use(express.json());
 app.use(mongoSanitize());
 app.use(helmet({
-      crossOriginResourcePolicy: false,
-    }));
+  crossOriginResourcePolicy: false,
+}));
+    
 
 app.use(cors);
 
